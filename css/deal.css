@@ -1,0 +1,39 @@
+.deal {
+    margin-top: 26px;
+    font-size: 14px;
+    width: 411px;
+    height: 316px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.deal div:nth-child(4) {
+    width: 371px;
+    border-bottom: 1px solid #333333;
+}
+
+.deal input, select, button {
+    width: 371px;
+    height: 32px;
+    margin-top: 5px;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+
+.deal select {
+    cursor: pointer;
+}
+
+.deal button {
+    margin-bottom: 28px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #333333;
+}
+
+.deal-type {
+    background: #FFFFFF;
+}
+
