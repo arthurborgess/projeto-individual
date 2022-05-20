@@ -1,8 +1,7 @@
 .deal {
-    margin-top: 26px;
-    font-size: 14px;
-    width: 411px;
-    height: 316px; 
+    margin-top: 5%;
+    font-size: .8rem;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -10,17 +9,17 @@
 }
 
 .deal div:nth-child(4) {
-    width: 371px;
     border-bottom: 1px solid #333333;
 }
 
-.deal input, select, button {
-    width: 371px;
-    height: 32px;
-    margin-top: 5px;
-    text-indent: 10px;
-    border-radius: 5px;
-    border: 1px solid #979797;
+.deal input, select {
+    width: 93vw;
+    height: 4vh;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    text-indent: .5rem;
+    border-radius: .3rem;
+    border: .1rem solid #979797;
 }
 
 .deal select {
@@ -28,7 +27,11 @@
 }
 
 .deal button {
-    margin-bottom: 28px;
+    width: 93vw;
+    height: 4vh;
+    text-indent: .5rem;
+    border-radius: .3rem;
+    margin-bottom: 8%;
     cursor: pointer;
     color: #FFFFFF;
     background: #333333;
@@ -38,6 +41,3 @@
     background: #FFFFFF;
 }
 
-#change {
-    padding-bottom: 17px;
-}

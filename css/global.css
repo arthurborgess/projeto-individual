@@ -8,8 +8,11 @@
     box-sizing: border-box;
 }
 
-.content {
-    margin: 0px auto;
-    width: 411px;
-    height: 731px;
+footer div  {
+    width: 100vw;
+    height: 1vh;
+    bottom: 0;
+    background-color: #333333;
+    position: absolute;
 }
+
