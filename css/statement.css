@@ -49,10 +49,13 @@
 }
 
 .statement-total h3 {
+    margin-left: 8vw;
+    margin-right: 4vw;
     font-size: .8rem;
 }
 
 #profit {
+    margin-left: 18vw;
     font-size: .6rem;
 }
 #change {
