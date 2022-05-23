@@ -6,7 +6,6 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 footer div  {
@@ -401,6 +400,9 @@ footer div  {
 }  
 
 @media only screen and (min-width: 769px) and (max-width: 1100px) {
+    body {
+        overflow: hidden;
+    }
 
     header {
         width: 100vw;
