@@ -692,7 +692,7 @@ footer div  {
     }
 
     .deal input, select {
-        width: 25vw;
+        width: 35vw;
         height: 4vh;
         margin-top: 1vh;
         text-indent: .5rem;
@@ -705,7 +705,7 @@ footer div  {
     }
 
     .deal-content button {
-        width: 25vw;
+        width: 35vw;
         height: 4vh;
         margin: 5%;
         text-indent: .5rem;
