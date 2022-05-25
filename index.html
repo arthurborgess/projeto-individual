@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div class="content">
-        <header>
-            <div class="nav-menu" id="nav-menu">
+    <header>
+        <div class="header-content">
+            <div class="nav-menu">
                 <svg onclick="menuHide()" width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -40,75 +40,76 @@
                     <div class="line3"></div>
                 </div>
             </nav>
-        </header>
-        <div class="container">
-            <div class="deal-content">
-                <h1 class="new-trade">Nova transação</h1>
-                <div class="deal">
-                    <div>
-                        <label>Tipo de transação</label><br>
-                        <select class="deal-type" placeholder="Compra">
-                            <option>Compra</option>
-                            <option>Venda</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label>Nome da mercadoria</label><br>
-                        <input type="text" id="major" placeholder="Input" />
-                    </div>
-                    <div>
-                        <label>Valor</label><br>
-                        <input type="number" placeholder="R$ 0,00" />
-                    </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="deal-content">
+            <h1 class="new-trade">Nova transação</h1>
+            <div class="deal">
+                <div>
+                    <label>Tipo de transação</label><br>
+                    <select class="deal-type" placeholder="Compra">
+                        <option>Compra</option>
+                        <option>Venda</option>
+                    </select>
                 </div>
-                <button type="submit">Adicionar transação</button>
-                <div id="deal-line"></div>
+                <div>
+                    <label>Nome da mercadoria</label><br>
+                    <input type="text" id="major" placeholder="Input" />
+                </div>
+                <div>
+                    <label>Valor</label><br>
+                    <input type="number" placeholder="R$ 0,00" />
+                </div>
             </div>
+            <button type="submit">Adicionar transação</button>
+            <div id="deal-line"></div>
+        </div>
 
-            <div class="statement">
-                <h1>Extrato de transações</h1>
+        <div class="statement">
+            <h1>Extrato de transações</h1>
 
-                <div class="statement-label">
-                    <div class="statement-line">
-                        <h2>Mercadoria</h2>
-                        <h2>Valor</h2>
-                    </div>
-                    <div class="statement-line">
-                        <p id="change">+</p>
-                        <div>
-                            <p class="merchandise">Lorem ipsum dolor sit amet<br>consectetur</p>
-                            <p>R$ 12.999,99</p>
-                        </div>
-                    </div>
-                    <div class="statement-line">
-                        <p>-</p>
-                        <div>
-                            <p class="merchandise">Quis nostrud exercitation</p>
-                            <p>R$ 99,99</p>
-                        </div>
-                    </div>
-                    <div class="statement-line">
-                        <p>+</p>
-                        <div>
-                            <p class="merchandise">Lorem ipsum</p>
-                            <p>R$ 9,99</p>
-                        </div>
+            <div class="statement-label">
+                <div class="statement-line">
+                    <h2>Mercadoria</h2>
+                    <h2>Valor</h2>
+                </div>
+                <div class="statement-line">
+                    <p id="change">+</p>
+                    <div>
+                        <p class="merchandise">Lorem ipsum dolor sit amet<br>consectetur</p>
+                        <p>R$ 12.999,99</p>
                     </div>
                 </div>
-                <div class="statement-total">
-                    <h3>Total</h3>
-                    <label>
-                        <h3 id="total-value">R$ 12.909,99</h3>
-                        <p id="profit">[LUCRO]</p>
-                    </label>
+                <div class="statement-line">
+                    <p>-</p>
+                    <div>
+                        <p class="merchandise">Quis nostrud exercitation</p>
+                        <p>R$ 99,99</p>
+                    </div>
                 </div>
+                <div class="statement-line">
+                    <p>+</p>
+                    <div>
+                        <p class="merchandise">Lorem ipsum</p>
+                        <p>R$ 9,99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="statement-total">
+                <h3>Total</h3>
+                <label>
+                    <h3 id="total-value">R$ 12.909,99</h3>
+                    <p id="profit">[LUCRO]</p>
+                </label>
             </div>
         </div>
-        <footer>
-            <div></div>
-        </footer>
     </div>
-    <script src="./script.js"></script>
+    <footer>
+        <div></div>
+    </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
