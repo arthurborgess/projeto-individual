@@ -1,7 +1,7 @@
 function menuShow (){
-    document.getElementById('nav-menu').style.display = 'flex';
+    document.getElementsByClassName('nav-menu')[0].style.display = 'flex';
 }
 
 function menuHide (){
-    document.getElementById('nav-menu').style.display = 'none';
+    document.getElementsByClassName('nav-menu')[0].style.display = 'none';
 }
