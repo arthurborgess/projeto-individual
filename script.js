@@ -78,18 +78,19 @@ function totalAmount() {   // calc total and calls the function which will displ
     for (let i = 0; i < deal.length; i++) {
 
         if (deal[i].dealType === 'Compra') {
-            purchase = deal[i].dealValue.replace('R$ ', '');
-            purchaseTotal += Number.parseFloat(purchase.replace(',', '.'));
+            purchase = deal[i].dealValue.replace(/\D/g, '');
+            purchaseTotal += Number.parseFloat(purchase);
         }
 
         if (deal[i].dealType === 'Venda') {
-            sell = deal[i].dealValue.replace('R$ ', '');
-            sellTotal += Number.parseFloat(sell.replace(',', '.'));
+            sell = deal[i].dealValue.replace(/\D/g, '');
+            sellTotal += Number.parseFloat(sell);
         }
 
     }
 
     total = sellTotal - purchaseTotal;
+    total /= 100;
 
     showTotal(total);
 
