@@ -8,6 +8,12 @@ function menuHide() {
 
 doStatement();
 
+function pasteCheck(e) {
+    if (e.key === 'v' && e.ctrlKey) {
+        maskMoney(e);
+    }
+}
+
 function maskMoney(e) {  
 
     e.preventDefault();
@@ -20,11 +26,7 @@ function maskMoney(e) {
 
     formattedInput /= 100;
 
-    e.target.value = formattedInput.toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-        minimumFractionDigits: 2,
-    });
+    e.target.value = formatMoney(formattedInput);
     
 }
 
@@ -125,9 +127,8 @@ function formatMoney(total) {    // convert total to BRL
 function dataClear() {    // clear all data from localStorage
 
     if (window.confirm('Todos os dados serão excluídos! Deseja prosseguir?')) {
-       localStorage.clear('deal'); 
-       location.reload();
+        localStorage.clear('deal'); 
+        location.reload();
     }
-    
 }
 

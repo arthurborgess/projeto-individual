@@ -62,7 +62,7 @@
                     <div>
                         <label>Valor</label><br>
                         <input type="text" id="value" placeholder="R$ 0,00" required autocomplete="off"
-                            onfocus="this.value = '';" onkeypress="maskMoney(event)" />
+                            onfocus="this.value = ''" ondragstart="return false" ondrop="return false" onkeypress="maskMoney(event)" onkeyup="pasteCheck(event)" />
                     </div>
                 </div>
                 <button type="submit">Adicionar transação</button>
