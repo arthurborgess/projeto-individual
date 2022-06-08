@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script src="https://plentz.github.io/jquery-maskmoney/javascripts/jquery.maskMoney.min.js"
-        type="text/javascript"></script>
     <title>Controle Financeiro</title>
 </head>
 
@@ -65,7 +62,7 @@
                     <div>
                         <label>Valor</label><br>
                         <input type="text" id="value" placeholder="R$ 0,00" required autocomplete="off"
-                            onfocus="this.value = '';" />
+                            onfocus="this.value = '';" onkeypress="maskMoney(event)" />
                     </div>
                 </div>
                 <button type="submit">Adicionar transação</button>

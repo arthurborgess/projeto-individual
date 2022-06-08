@@ -8,16 +8,25 @@ function menuHide() {
 
 doStatement();
 
-$(document).ready(function () {    // in real time BRL input conversion
-    $('#value').maskMoney({
-      prefix: 'R$ ',
-      allowNegative: false,
-      thousands: '.',
-      decimal: ',',
-      affixesStay: true,
-    });
-});
+function maskMoney(e) {  
 
+    e.preventDefault();
+
+    if ((/[0-9]+/g).test(e.key)) {
+        e.target.value += e.key;
+    }
+
+    let formattedInput = Number(e.target.value.replace(/[^0-9]+/g, ''));
+
+    formattedInput /= 100;
+
+    e.target.value = formattedInput.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        minimumFractionDigits: 2,
+    });
+    
+}
 
 function dealSubmit(e) {    // captures the input values and calls the function responsible for displaying them
 
