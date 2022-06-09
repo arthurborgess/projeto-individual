@@ -62,7 +62,7 @@ nav {
 .nav-menu {
     position: fixed;
     right: 0;
-    width: 351px;
+    width: 250px;
     height: 100%;
     background: #333333;
     display: none;
@@ -86,10 +86,18 @@ nav {
     margin-top: 62px;
 }
 
+.nav-menu ul li a {
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #000;
+}
+
 .nav-menu a {
     font-weight: 600;
     text-decoration: none;
-    font-size: 16px;
     color: #ffffff;
     margin-bottom: 7px;
 }
@@ -129,6 +137,11 @@ select {
     cursor: pointer;
     color: #FFFFFF;
     background: #333333;
+    transition: 0.3s;
+}
+
+.deal-content button:hover {
+    background: #222;
 }
 
 #deal-line {
@@ -213,10 +226,6 @@ select {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1111px) {
-
-    .nav-menu {
-        width: 252px;
-    }
 
     .container {
         width: 768px;

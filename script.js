@@ -1,33 +1,32 @@
-function menuShow() {                                                
-    document.querySelector('.nav-menu').style.display = 'flex';     
-}                                                                  
-                                                                  // show/hide mobile menu
-function menuHide() {                                            
-    document.querySelector('.nav-menu').style.display = 'none'; 
-}                                                              
-
 doStatement();
 
-function pasteCheck(e) {
+function menuShow() {
+    document.querySelector('.nav-menu').style.display = 'flex';
+}
+                                                                    // show/hide mobile menu
+function menuHide() {
+    document.querySelector('.nav-menu').style.display = 'none';
+}
+
+function pasteCheck(e) {    // apply the mask to the value field in case of ctrl+v
     if (e.key === 'v' && e.ctrlKey) {
         maskMoney(e);
     }
 }
 
-function maskMoney(e) {  
+function maskMoney(e) {    // in real time BRL money mask and validation
 
     e.preventDefault();
-
+    
     if ((/[0-9]+/g).test(e.key)) {
         e.target.value += e.key;
     }
 
     let formattedInput = Number(e.target.value.replace(/[^0-9]+/g, ''));
-
     formattedInput /= 100;
 
     e.target.value = formatMoney(formattedInput);
-    
+
 }
 
 function dealSubmit(e) {    // captures the input values and calls the function responsible for displaying them
@@ -57,7 +56,6 @@ function doStatement() {    // show statement label and calls calls the function
     deal = JSON.parse(localStorage.getItem('deal'));
 
     if (deal != null) {
-
         document.querySelector('.statement-label').innerHTML = deal.map((item) => {
             return `<div class="statement-line">
                 <p>${item.dealType == 'Compra' ? '-' : '+'}</p>
@@ -67,13 +65,11 @@ function doStatement() {    // show statement label and calls calls the function
                 </div>
             </div>`
         }).join('');
-
         document.getElementById('stat-info').innerHTML = 'Total';
 
         totalAmount();
-    
     }
-
+    
 }
 
 function totalAmount() {   // calc total and calls the function which will display them
@@ -117,18 +113,32 @@ function showTotal(total) {   // show total and if there was profit or loss
 
 }
 
-function formatMoney(total) {    // convert total to BRL
+function formatMoney(total) {    // convert number to BRL
     return new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL'
     }).format(total);
 }
 
-function dataClear() {    // clear all data from localStorage
+function dataClear() {    // erase all data from localStorage
 
     if (window.confirm('Todos os dados serão excluídos! Deseja prosseguir?')) {
-        localStorage.clear('deal'); 
-        location.reload();
+        localStorage.clear('deal');
+        statementClear();
     }
 }
 
+function statementClear() {    //clean statement table without reload the page
+
+    document.querySelector('.statement-label').innerHTML =
+        `<div class="statement-line">
+            <p></p>
+            <div>
+                <p class="merchandise">Nenhuma transação cadastrada.</p>
+                <p></p>
+            </div>
+        </div>`
+
+    document.querySelector('.statement-total').innerHTML = '';
+
+}
