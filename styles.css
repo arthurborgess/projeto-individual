@@ -9,7 +9,7 @@
 }
 
 header {
-    width: 100%;
+    width: 100vw;
     height: 60px;
     background-color: #E0E0E0;
 }
@@ -32,6 +32,11 @@ footer {
     align-self: flex-end;
 }
 
+.header-content {
+    width: 90vw;
+    margin: 0 auto;
+}
+
 nav {
     margin: 0 auto;
     width: 100%;
@@ -39,7 +44,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 22px;
 }
 
 .logo {
@@ -62,7 +66,7 @@ nav {
 .nav-menu {
     position: fixed;
     right: 0;
-    width: 250px;
+    width: 70%;
     height: 100%;
     background: #333333;
     display: none;
@@ -91,10 +95,6 @@ nav {
     transition: 0.3s;
 }
 
-.nav-menu ul li a:hover {
-    color: #000;
-}
-
 .nav-menu a {
     font-weight: 600;
     text-decoration: none;
@@ -109,7 +109,7 @@ nav {
 .deal-content {
     margin-top: 26px;
     font-size: 14px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -118,7 +118,7 @@ nav {
 
 .deal input,
 select {
-    width: 371px;
+    width: 90vw;
     height: 32px;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -129,7 +129,7 @@ select {
 }
 
 .deal-content button {
-    width: 371px;
+    width: 90vw;
     height: 32px;
     margin-bottom: 20px;
     text-indent: 10px;
@@ -137,7 +137,6 @@ select {
     cursor: pointer;
     color: #FFFFFF;
     background: #333333;
-    transition: 0.3s;
 }
 
 .deal-content button:hover {
@@ -145,7 +144,7 @@ select {
 }
 
 #deal-line {
-    width: 371px;
+    width: 90vw;
     border-bottom: 1px solid #333333;
 }
 
@@ -154,7 +153,7 @@ select {
 }
 
 .statement {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -164,7 +163,7 @@ select {
 
 
 .statement-label div {
-    width: 371px;
+    width: 90vw;
     font-size: 14px;
     display: flex;
     justify-content: space-between;
@@ -184,7 +183,7 @@ select {
 }
 
 .statement-subtitle {
-    width: 371px;
+    width: 90vw;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
@@ -203,7 +202,7 @@ select {
 
 .statement-total {
     margin-top: 3px;
-    width: 371px;
+    width: 90vw;
     padding-left: 30px;
     padding-right: 10px;
     border-top: 1px solid black;
@@ -228,7 +227,6 @@ select {
 @media only screen and (min-width: 768px) and (max-width: 1111px) {
 
     .container {
-        width: 768px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -236,8 +234,12 @@ select {
         font-size: 18px;
     }
 
+    .nav-menu {
+        width: 30vw;
+    }
+
     .deal-content {
-        width: 728px;
+        width: 90vw;
         height: 189px;
         justify-content: space-between;
         border: 1px solid #979797;
@@ -260,7 +262,7 @@ select {
 
     .deal input,
     select {
-        width: 150px;
+        width: 18vw;
     }
 
     .new-trade {
@@ -271,22 +273,22 @@ select {
     }
 
     #major {
-        width: 348px;
+        width: 46vw;
     }
 
     .deal-content button {
         align-self: flex-end;
-        width: 200px;
+        width: 25vw;
         margin-right: 20px;
     }
 
     .statement {
-        width: 768px;
+        width: 100vw;
         margin-top: 23px;
     }
 
     .statement-label div {
-        width: 728px;
+        width: 90vw;
     }
 
     .statement h1 {
@@ -299,7 +301,7 @@ select {
     }
     
     .statement-subtitle {
-        width: 728px;
+        width: 90vw;
     }
 
     .statement p {
@@ -308,7 +310,7 @@ select {
     }
 
     .statement-total {
-        width: 728px;
+        width: 90vw;
         align-items: flex-start;
     }
 
@@ -344,7 +346,8 @@ select {
         display: none;
     }
 
-    nav{
+    nav {
+        width: 64%;
         justify-content: left;
     }
 
